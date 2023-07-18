@@ -1,0 +1,15 @@
+﻿@using DbMvc.Models.Entity
+@model List<Tbl_Hobbys>
+
+
+
+<div class="resume-section-content">
+    <h2 class="mb-5">Hobilerim</h2>
+    @foreach(var item in Model)
+            {
+                
+
+    <p>@item.comment</p>
+    <p class="mb-0">@item.comment2</p>
+    }
+</div>

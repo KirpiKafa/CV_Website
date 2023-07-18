@@ -249,6 +249,13 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\Deneyim.cshtml" />
+    <Content Include="Views\Default\Egitimlerim.cshtml" />
+    <Content Include="Views\Default\Yetenekler.cshtml" />
+    <Content Include="Views\Default\Yeteneklerim.cshtml" />
+    <Content Include="Views\Default\Hobilerim.cshtml" />
+    <Content Include="Views\Default\Sertifikalarim.cshtml" />
+    <Content Include="Views\Default\iletisim.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
