@@ -1,14 +1,21 @@
-﻿@using DbMvc.Models.Entity
-@model List<Tbl_Hobbys>
-
+﻿
 
 
 <div class="resume-section-content">
-    <h2 class="mb-5">İletişim</h2>
-    
-    <label>
+    <form method="post">
+        <h2 class="mb-5">Hobilerim</h2>
+        <label>İsim Soyisim</label>
+        <input type="text" class="form-control" name="name_surname" />
 
-    </label>
+        <label>Mail</label>
+        <input type="text" class="form-control" name="mail" />
 
+        <label>Konu</label> 
+        <input type="text" class="form-control"  name="subject" />
 
+        <label>Mesaj</label>
+        <input type="text" class="form-control" name="message" />
+        <br />
+        <button class="btn btn-info">Mesaj Gönder</button>
+    </form>
 </div>

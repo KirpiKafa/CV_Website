@@ -41,9 +41,18 @@ namespace DbMvc.Controllers
             var sertifikalar = db.Tbl_Certificate.ToList();
             return PartialView(sertifikalar);
         }
+        [HttpGet]
         public PartialViewResult iletisim()
         {
             
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult iletisim(Tbl_Communication t)
+        {
+            t.date=DateTime.Parse(DateTime.Now.ToShortDateString());
+            db.Tbl_Communication.Add(t);
+            db.SaveChanges();
             return PartialView();
         }
 
