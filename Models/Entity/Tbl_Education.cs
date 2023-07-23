@@ -11,14 +11,21 @@ namespace DbMvc.Models.Entity
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Tbl_Education
     {
         public int ID { get; set; }
+        [Required (ErrorMessage ="Bu Alaný Doldurmalýsýnýz !!!!")]
         public string title { get; set; }
+        
         public string subtitle { get; set; }
+        
         public string subtitle2 { get; set; }
+       
         public string gno { get; set; }
+        [StringLength(10, ErrorMessage ="Lütfen En Fazla 10 Karakterlik Veri Giriþi Yapýn!!!")]
         public string date { get; set; }
+       
     }
 }

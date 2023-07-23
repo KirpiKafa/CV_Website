@@ -79,6 +79,7 @@
     <EntitySetMapping Name="Tbl_Skills">
       <EntityTypeMapping TypeName="CVModel.Tbl_Skills">
         <MappingFragment StoreEntitySet="Tbl_Skills">
+          <ScalarProperty Name="rate" ColumnName="rate" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="skill" ColumnName="skill" />
         </MappingFragment>

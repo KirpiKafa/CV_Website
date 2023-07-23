@@ -16,5 +16,6 @@ namespace DbMvc.Models.Entity
     {
         public int ID { get; set; }
         public string skill { get; set; }
+        public Nullable<byte> rate { get; set; }
     }
 }

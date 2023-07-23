@@ -12,7 +12,7 @@
         <EntityTypeShape EntityType="CVModel.Tbl_Education" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CVModel.Tbl_Experience" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CVModel.Tbl_Hobbys" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="CVModel.Tbl_Skills" Width="1.5" PointX="2.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CVModel.Tbl_Skills" Width="1.5" PointX="2.875" PointY="7" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
