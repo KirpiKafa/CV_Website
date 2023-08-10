@@ -7,6 +7,7 @@ using DbMvc.Models.Entity;
 
 namespace DbMvc.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
@@ -15,6 +16,12 @@ namespace DbMvc.Controllers
         {
             var degerler = db.Tbl_About.ToList();
             return View(degerler);
+        }
+
+        public PartialViewResult SosyalMedya()
+        {
+            var sosyalmedya = db.Tbl_SocialMedia.Where(x => x.status == true).ToList();
+            return PartialView(sosyalmedya);
         }
         public PartialViewResult Deneyim()
         {

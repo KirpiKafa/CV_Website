@@ -33,5 +33,7 @@ namespace DbMvc.Models.Entity
         public virtual DbSet<Tbl_Experience> Tbl_Experience { get; set; }
         public virtual DbSet<Tbl_Hobbys> Tbl_Hobbys { get; set; }
         public virtual DbSet<Tbl_Skills> Tbl_Skills { get; set; }
+        public virtual DbSet<Tbl_SocialMedia> Tbl_SocialMedia { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

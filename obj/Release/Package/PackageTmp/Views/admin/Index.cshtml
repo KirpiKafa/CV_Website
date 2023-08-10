@@ -1,0 +1,41 @@
+﻿@using DbMvc.Models.Entity
+@model List<Tbl_Admin> 
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th> Kullanıcı Adı</th>
+        <th>Düzenle</th>
+        <th>Kaldır</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.ID
+            </td>
+            <td>
+                @item.username
+            </td>
+            <td>
+                <a href="/admin/AdminDuzenle/@item.ID" class="btn btn-success">Düzenle</a>
+            </td>
+            <td>
+                <a href="/admin/AdminSil/@item.ID" class="btn btn-danger">Sil</a>
+            </td>
+
+
+        </tr>
+    }
+</table>
+
+<a href="/admin/AdminEkle" class="btn btn-primary">Yeni Kullanıcı Ekle</a>

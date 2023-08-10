@@ -1,0 +1,24 @@
+﻿@model DbMvc.Models.Entity.Tbl_Admin
+
+
+@{
+    ViewBag.Title = "AdminDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>AdminDuzenle</h2>
+
+<br />
+<h4>Admin Güncelleme Sayfası</h4>
+<br />
+<form method="post">
+    @Html.Label("Admin ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })<br />
+    @Html.Label("Kullanıcı Adı")
+    @Html.TextBoxFor(x => x.username , new { @class = "form-control" })<br />
+    @Html.Label("Şifre")
+    @Html.TextBoxFor(x => x.password, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+

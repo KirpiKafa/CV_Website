@@ -1,0 +1,28 @@
+﻿@using DbMvc.Models.Entity
+@model List<Tbl_Hobbys>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<html>
+<head></head>
+<body>
+    <br />
+    <h2>Hobi Düzenleme Sayfası</h2>
+    <br />
+    <form method="post">
+        @foreach (var item in Model)
+        {
+            <label>Açıklama 1</label>
+<textarea rows="10" class="form-control" name="comment">@item.comment</textarea>
+            <br />
+            <label>Açıklama 2</label>
+<textarea rows="10" class="form-control"name="comment2">@item.comment2</textarea>
+        }
+        <br /><button class="btn btn-success">Güncelle</button>
+    </form>
+</body>
+</html>

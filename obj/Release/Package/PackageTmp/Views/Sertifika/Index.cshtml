@@ -1,0 +1,86 @@
+﻿@using DbMvc.Models.Entity
+@model List<Tbl_Certificate>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | User Profile</title>
+</head>
+<body class="hold-transition sidebar-mini">
+   
+            <!-- Content Header (Page header) -->
+            
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row"> 
+                      
+                        <!-- /.col -->
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-header p-2">
+                                    
+                                </div><!-- /.card-header -->
+                                <div class="card-body">
+                                        
+                                        <!-- /.tab-pane -->
+                                        <div class="tab-pane" id="timeline">
+                                            <!-- The timeline -->
+                                            <div class="timeline timeline-inverse">
+                                                <!-- timeline time label -->
+                                                @foreach (var item in Model)
+                                                {
+                                                    <div class="time-label">
+                                                       <a href="/Sertifika/SertifikaGetir/@item.ID" class="btn btn-success" >
+                                                            <span class="bg-success">
+                                                                 @item.date
+                                                            </span> 
+                                                        </a>
+                                                    </div>
+                                                    <!-- /.timeline-label -->
+                                                    <!-- timeline item -->
+                                                    <div>
+
+                                                        <div class="timeline-item">
+
+
+                                                            <div class="timeline-body">
+                                                                @item.comment
+                                                            </div>
+                                                            @*<div class="timeline-footer">
+                                                                <a href="#" class="btn btn-primary btn-sm">Düzenle</a>
+                                                                <a href="#" class="btn btn-danger btn-sm">Sil</a>
+                                                            </div>*@
+                                                        </div>
+                                                    </div>
+                                                    
+                                                }
+                                            </div>
+                                            <a href="/Sertifika/Yenisertifika" class="btn btn-info">Yeni Sertifika Girişi</a>
+                                        </div>
+                                        
+                                    </div>
+                                    <!-- /.tab-content -->
+                                </div><!-- /.card-body -->
+                            </div>
+                            <!-- /.card -->
+                        </div>
+                        <!-- /.col -->
+                    </div>
+                    <!-- /.row -->
+                
+            </section>
+            <!-- /.content -->
+       
+</body>
+</html>
+
+

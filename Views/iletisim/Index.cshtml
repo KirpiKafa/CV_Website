@@ -1,0 +1,106 @@
+﻿@using DbMvc.Models.Entity
+@model List<Tbl_Communication>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<body class="hold-transition sidebar-mini">
+    <!-- Right navbar links -->
+    <!-- /.navbar -->
+    <!-- Main Sidebar Container -->
+    <!-- Content Wrapper. Contains page content -->
+        <!-- Content Header (Page header) -->
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+
+                    <!-- Profile Image -->
+                    <!-- /.card -->
+                    <!-- About Me Box -->
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+
+                                <!-- /.tab-pane -->
+                                <div class="tab-pane" id="timeline">
+                                    <!-- The timeline -->
+                                    <div class="timeline timeline-inverse">
+                                        @foreach(var item in Model) {
+                                        <!-- timeline time label -->
+                                        <div class="time-label">
+                                            <span class="bg-info">
+                                                @(((DateTime)item.date).ToString("dd-MMM-yyyy"))
+                                            </span>
+                                        </div>
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+
+                                        <!-- END timeline item -->
+                                        <!-- timeline item -->
+
+                                        <!-- END timeline item -->
+                                        <!-- timeline item -->
+                                        <div>
+                                            <i class="fas fa-comments bg-warning"></i>
+
+                                            <div class="timeline-item">
+                                                <span class="time"><i class="far fa-clock"></i> @item.mail</span>
+
+                                                <h3 class="timeline-header"><a href="#">@item.name_surname <br/> </a><b>Konu:</b> @item.subject </h3>
+
+                                                <div class="timeline-body">
+                                                    @item.message
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        }
+                                        <!-- END timeline item -->
+                                        <!-- timeline time label -->
+                                       
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                    
+                                        <!-- END timeline item -->
+                                       
+                                    </div>
+                                </div>
+                                <!-- /.tab-pane -->
+                                <!-- /.tab-pane -->
+                            </div>
+                            <!-- /.tab-content -->
+                        </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+    </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <!-- Control Sidebar -->
+ 
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+    </div>
+
+</body>
+
+
+

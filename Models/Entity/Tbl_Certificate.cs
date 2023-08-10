@@ -16,5 +16,6 @@ namespace DbMvc.Models.Entity
     {
         public int ID { get; set; }
         public string comment { get; set; }
+        public string date { get; set; }
     }
 }

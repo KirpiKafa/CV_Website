@@ -1,0 +1,32 @@
+﻿@model DbMvc.Models.Entity.Tbl_Education
+
+
+@{
+    ViewBag.Title = "EgitimEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Yeni Eğitim Bilgisi Ekleme Sayfası</h4>
+<br />
+<form method="post">
+    @Html.ValidationMessageFor(x => x.title, "", new { @style = "color:red" })
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })<br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.subtitle, new { @class = "form-control" })<br />
+    @Html.Label("Alt Başlık2")
+    @Html.TextBoxFor(x => x.subtitle2, new { @class = "form-control" })<br />
+    @Html.Label("GNO")
+    @Html.TextBoxFor(x => x.gno, new { @class = "form-control" })<br />
+    @Html.ValidationMessageFor(x => x.gno, "", new { @style = "color:red" })
+    @Html.Label("Tarih")
+    @Html.TextBoxFor(x => x.date, new { @class = "form-control" })<br />
+
+    <br />
+    <button class="btn btn-info">Kaydet</button>
+</form>
+
+
+
+

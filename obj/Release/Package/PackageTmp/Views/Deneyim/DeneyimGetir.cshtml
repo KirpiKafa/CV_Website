@@ -1,0 +1,25 @@
+﻿@model DbMvc.Models.Entity.Tbl_Experience
+
+
+@{
+    ViewBag.Title = "DeneyimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h4>Deneyim Güncelleme Sayfası</h4>
+<br />
+<form method="post">
+    @Html.Label("Deneyim ID")
+    @Html.TextBoxFor(x => x.ID, new { @class="form-control"} )<br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.title, new { @class = "form-control" })<br />
+    @Html.Label("Alt Başlık")
+    @Html.TextBoxFor(x => x.subtitle, new { @class = "form-control" })<br />
+    @Html.Label("Tarih")
+    @Html.TextAreaFor(x => x.date, new { @class = "form-control" })<br />
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+</form>
+
+
